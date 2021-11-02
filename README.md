@@ -1,6 +1,7 @@
 # aec-evaluation
 Module for the evaluation of Acoustic Echo Cancellation systems.  
 ## Evaluation metrics 
+`aec_eval.py` assemble the implementation of the following metrics:
 ### Echo Return Loss Enhancement ([ERLE](#erle))
 Objective metric that gives indication of additional signal loss applied by the echo canceller.  
 ERLE is only appropriate when measured in a quiet room with no background noise and only for single talk scenarios. 
@@ -10,6 +11,11 @@ Objective metric that models subjective tests commonly used in telecommunication
 -**[P.862.2](#8622)**: meant for both narrowband and wideband, and the output is represented as MOS-LQO score.  
 ### Short Time Objective Intelligibility measures ([STOI](#stoi))
 Objective metric for the assessment of the intelligibility of noisy and enhanced sppech.  
+## Python wrappers
+The module `aec_eval.py` uses the following python wrappers/packages:
+- P.862: [vBaiCai/python-pesq](https://github.com/vBaiCai/python-pesq).   
+- P.862.2: [ludlows/python-pesq](https://github.com/ludlows/python-pesq).   
+- STOI: [mpariente/pystoi](https://github.com/mpariente/pystoi).   
 ## Conda environment
 The files needed to create the conda environment used for this branch are in `/env` directory.  
 Using the specification text file `spec-file.txt`:
